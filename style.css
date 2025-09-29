@@ -1,0 +1,112 @@
+/* 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    #output {
+      margin-top: 20px;
+      width: 80%;
+      min-height: 50px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 18px;
+      background-color: #f9f9f9;
+      white-space: pre-wrap;
+    }
+    #startbtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    } */
+
+
+    /* Reset */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  color: #003366;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 30px; /* gap under title */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Button Styling */
+#startbtn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background: #4facfe;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+  margin-bottom: 30px; /* gap below button */
+}
+
+#startbtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(79, 172, 254, 0.6);
+}
+
+/* Output box */
+.output-box {
+  margin-top: 10px; /* space above output */
+  width: 80%;
+  max-width: 500px;
+  min-height: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  color: #003366;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Glow effect when listening */
+.listening {
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.5); }
+  70% { box-shadow: 0 0 0 20px rgba(79, 172, 254, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(79,172,254,0.5); }
+  to   { box-shadow: 0 0 20px rgba(79,172,254,0.9); }
+}
