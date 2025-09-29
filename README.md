@@ -16,19 +16,3 @@ The application listens to your voice through the microphone, converts speech in
 💡 Animated and responsive UI.
 
 
-⚙️ Installation & Setup
-
-Clone the repository
-
-git clone https://github.com/nikitha-kn/SPEECH_TO_RECOGNITION.git
-cd SPEECH_TO_RECOGNITION
-
-
-Install dependencies
-
-pip install requirements.txt
-
-
-Run the app using Selenium
-
-python run.py
