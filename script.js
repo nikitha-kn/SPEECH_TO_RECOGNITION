@@ -103,6 +103,12 @@ if ('webkitSpeechRecognition' in window) {
   recognition.onerror = function(event) {
     output.innerText = "⚠️ Error: " + event.error;
     outputBox.classList.remove("listening"); // Remove glow
+
+       if (transcript.toLowerCase().includes("stop listening")) {
+      recognition.stop();
+      output.innerText = "🛑 Stopped Listening";
+      outputBox.classList.remove("listening");
+    }
   };
 
   recognition.onend = function() {
@@ -117,3 +123,4 @@ startbtn.addEventListener("click", () => {
     recognition.start();
   }
 });
+
